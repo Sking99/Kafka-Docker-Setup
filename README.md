@@ -15,10 +15,12 @@ docker compose up -d
  docker exec -it -w /opt/kafka/bin broker sh
 ```
 
-- To Add a topic in Kafka,
+- To Add a topic in Kafka and list all the topics
 
 ```
 ./kafka-topics.sh --create --topic sample-topic --bootstrap-server broker:29092
+
+./kafka-topics.sh --bootstrap-server broker:29092 --list 
 ```
 
 - To start consumer on a topic,
